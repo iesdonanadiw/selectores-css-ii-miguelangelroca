@@ -1,35 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body {
-      color: red; /* Propiedad que se hereda. */
-    }
-    .heredar {
-      color: inherit; /* El valor "inherit" fuerza que herede el valor del color de su etiqueta contenedora. */
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: red; /* Propiedad que se hereda. */
+      }
+      .heredar {
+        color: inherit; /* El valor "inherit" fuerza que herede el valor del color de su etiqueta contenedora. */
+      }
 
-    p {
-      border: 3px solid red; /* Propiedad que no se hereda. */
-      padding: 20px; /* Propiedad que no se hereda. */
-      margin: 20px; /* Propiedad que no se hereda. */
-    }
+      p {
+        border: 3px solid red; /* Propiedad que no se hereda. */
+        padding: 20px; /* Propiedad que no se hereda. */
+        margin: 20px; /* Propiedad que no se hereda. */
+      }
 
-    .no-heredar {
-      border: initial; /* El valor "initial" resetea los estilos aplicados al valor inicial. */
-      margin: initial;
-      padding: initial;
-    }
-  </style>
-</head>
-<body>
-  <!-- Las etiquetas a no heredan el color de los párrafos. -->
-  <p>Vivamus suscipit tortor eget felis porttitor volutpat. <b><a href="#">Vestibulum ac diam sit amet quam</a></b> vehicula elementum sed sit amet dui.</p>
-  <p>Vivamus suscipit tortor eget felis porttitor volutpat. <b><a href="#" class="heredar">Nulla porttitor accumsan</a></b> tincidunt.</p>
-  <p class="no-heredar">Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt.</p>
-</body>
+      .no-heredar {
+        border: initial; /* El valor "initial" resetea los estilos aplicados al valor inicial. */
+        padding: initial;
+        margin: initial;
+      }
+      .heredan {
+        color: blueviolet;
+        font-size: 20px;
+      }
+      .no-heredan {
+        color: initial;
+        font-size: initial;
+        border: initial;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Las etiquetas a no heredan el color de los párrafos. -->
+    <p>
+      Vivamus suscipit tortor eget felis porttitor volutpat.
+      <b><a href="#">Vestibulum ac diam sit amet quam</a></b> vehicula elementum
+      sed sit amet dui.
+    </p>
+    <p>
+      Vivamus suscipit tortor eget felis porttitor volutpat.
+      <b><a href="#" class="heredar">Nulla porttitor accumsan</a></b> tincidunt.
+    </p>
+    <p class="no-heredar">
+      Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor
+      accumsan tincidunt.
+    </p>
+
+    <p class="heredan">
+      <em>Estos elementos</em
+      ><strong> heredan del padre que es una etiqueta p.</strong>
+    </p>
+
+    <p class="no-heredan">
+      <em>Estos elementos</em><strong> forzamos a que no hereden.</strong>
+    </p>
+  </body>
 </html>

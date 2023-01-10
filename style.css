@@ -1,0 +1,57 @@
+table,
+th,
+td,
+tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+#titulo {
+  color: teal;
+}
+p strong {
+  color: red;
+}
+.destacado {
+  color: yellow;
+}
+#subtitulo {
+  color: blue;
+}
+a {
+  color: red;
+}
+a em {
+  color: blue;
+}
+
+span.especial {
+  color: purple;
+}
+
+.especial {
+  color: yellow;
+}
+
+td {
+  color: green;
+}
+
+td strong {
+  color: yellow;
+}
+
+tfoot {
+  color: red;
+}
+#adicional {
+  color: olive;
+}
+#especial {
+  color: fuchsia;
+}
+#adicional a {
+  color: green;
+}
+tbody th {
+  color: red;
+}
